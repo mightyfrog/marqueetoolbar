@@ -1,6 +1,10 @@
+<img src="static/screenshot.gif" alt="demo" align="right" width="300px" />
+
 # Android Marqueeable Toolbar
 
-![](static/screenshot.gif)
+```groovy
+compile "org.mightyfrog.marqueetoolbar:marqueetoolbar:1.0.0"
+``` 
 
 Usage
 --------
