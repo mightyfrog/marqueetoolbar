@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MarqueeToolbar">
+        <attr name="startDelay" format="integer" />
+        <attr name="titleMarqueeEnabled" format="boolean" />
+        <attr name="subtitleMarqueeEnabled" format="boolean" />
+        <attr name="titleRepeat" format="integer" />
+        <attr name="subtitleRepeat" format="integer" />
+        <attr name="titleText" format="string" />
+        <attr name="subtitleText" format="string" />
+    </declare-styleable>
+
+</resources>

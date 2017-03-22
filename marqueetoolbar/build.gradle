@@ -1,0 +1,108 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "$version_name"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:$support_lib_version"
+}
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+group = 'org.mightyfrog.marqueetoolbar'
+version = "$version_name"
+def siteUrl = 'https://github.com/mightyfrog/marqueetoolbar'
+def gitUrl = 'https://github.com/mightyfrog/marqueetoolbar.git'
+
+bintray {
+    user = 'bintray_user'
+    key = 'bintray_api_key'
+
+    configurations = ['archives'] //When uploading configuration files
+    pkg {
+        repo = 'maven'
+        name = 'marqueetoolbar'
+        desc = 'Android Marquee Toolbar'
+        websiteUrl = siteUrl
+        issueTrackerUrl = 'https://github.com/mightyfrog/marqueetoolbar/issues'
+        vcsUrl = gitUrl
+        licenses = ['Apache-2.0']
+        labels = ['android']
+        publicDownloadNumbers = true
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'marqueetoolbar'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'mightyfrog'
+                        name 'Shigehiro Soejima'
+                        email 'android@mightyfrog.org'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/mightyfrog/marqueetoolbar.git'
+                    developerConnection 'https://github.com/mightyfrog/marqueetoolbar.git'
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task findConventions << {
+    println project.getConvention()
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
