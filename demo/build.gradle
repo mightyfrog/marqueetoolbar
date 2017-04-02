@@ -22,6 +22,6 @@ android {
 dependencies {
     compile "com.android.support:appcompat-v7:$support_lib_version"
     compile "com.android.support:design:$support_lib_version"
-    compile "org.mightyfrog.marqueetoolbar:marqueetoolbar:1.0.0"
+    compile "org.mightyfrog.marqueetoolbar:marqueetoolbar:1.0.1"
 //    compile project(":marqueetoolbar")
 }
