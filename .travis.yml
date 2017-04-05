@@ -1,13 +1,15 @@
-before_install:
-  - chmod +x gradlew
 language: android
 jdk: oraclejdk8
+
+before_install:
+  - chmod +x gradlew
+
 android:
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    # - platform-tools
-    # - tools
+    - platform-tools
+    - tools
 
     # The BuildTools version used by your project
     - build-tools-25.0.2
