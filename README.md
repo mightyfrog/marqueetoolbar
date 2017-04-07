@@ -53,3 +53,5 @@ Replace android's <i>Toolbar</i> with <i>org.mightyfrog.widget.MarqueeToolbar</i
 <b>titleText</b>: the default title text
 <br>
 <b>subtitleText</b>: the default subtitle text
+
+[![Build Status](https://travis-ci.org/mightyfrog/marqueetoolbar.svg?branch=master)](https://travis-ci.org/mightyfrog/marqueetoolbar)
