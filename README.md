@@ -3,7 +3,7 @@
 # Android Marqueeable Toolbar
 
 ```groovy
-compile "org.mightyfrog.marqueetoolbar:marqueetoolbar:1.0.0"
+compile "org.mightyfrog.marqueetoolbar:marqueetoolbar:1.0.2"
 ``` 
 
 Usage
