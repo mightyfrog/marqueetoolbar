@@ -44,11 +44,11 @@ Replace android's <i>Toolbar</i> with <i>org.mightyfrog.widget.MarqueeToolbar</i
 <br>
 <b>titleRepeat</b>: the number of title loops, -1 to repeat permanently (default = -1)
 <br>
-<b>mRepeatSubtitle</b>: the number of subtitle loops, -1 tp repeast permanently (default = -1)
-<br>
-<b>mTitleMarqueeEnabled</b>: enable(true)/disable(false) title marque (defualt = true)
-<br>
 <b>subtitleRepeat</b>: enable(true)/disable(false) subtitle marque (defualt = true)
+<br>
+<b>titleMarqueeEnabled</b>: the number of subtitle loops, -1 tp repeast permanently (default = -1)
+<br>
+<b>subtitleMarqueeEnabled</b>: enable(true)/disable(false) title marque (defualt = true)
 <br>
 <b>titleText</b>: the default title text
 <br>
