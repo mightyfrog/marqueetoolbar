@@ -33,12 +33,9 @@ version = "$version_name"
 def siteUrl = 'https://github.com/mightyfrog/marqueetoolbar'
 def gitUrl = 'https://github.com/mightyfrog/marqueetoolbar.git'
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 bintray {
-    user = properties.getProperty('bintray_user')
-    key = properties.getProperty('bintray_api_key')
+    user = 'bintray_user'
+    key = 'bintray_api_key'
 
     configurations = ['archives'] //When uploading configuration files
     pkg {
