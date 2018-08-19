@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 2
         versionName "$version_name"
     }
@@ -22,7 +21,7 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:$support_lib_version"
+    implementation "com.android.support:appcompat-v7:$support_lib_version"
 }
 
 apply plugin: 'com.github.dcendents.android-maven'
