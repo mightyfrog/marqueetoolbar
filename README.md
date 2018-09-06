@@ -75,4 +75,5 @@ License for the specific language governing permissions and limitations under
 the License.
 
 
+[![Build Status](https://app.bitrise.io/app/d4ee03337036aa1f/status.svg?token=Y35xwApbrEMWxV5kQcodgw)](https://app.bitrise.io/app/d4ee03337036aa1f)
 [![Build Status](https://travis-ci.org/mightyfrog/marqueetoolbar.svg?branch=master)](https://travis-ci.org/mightyfrog/marqueetoolbar)
